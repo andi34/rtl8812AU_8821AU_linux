@@ -5,11 +5,11 @@ rtl8812AU_8821AU linux kernel driver for AC1200 (801.11ac) Wireless Dual-Band US
 ## Compiling with make
 
 ```sh
-# cd /$PATH-TO/rtl8812AU_8821AU_linux
-# sudo make clean
-# sudo make
-# sudo make install
-# sudo modprobe -a 8812au
+cd /$PATH-TO/rtl8812AU_8821AU_linux
+sudo make clean
+sudo make
+sudo make install
+sudo modprobe -a 8812au
 ```
 Now reboot your system once.
 
@@ -17,18 +17,18 @@ Now reboot your system once.
 ## Compiling with DKMS
 
 ```sh
-# sudo cp -R . /usr/src/rtl8812AU_8821AU_linux-1.0
-# sudo dkms add -m rtl8812AU_8821AU_linux -v 1.0
-# sudo dkms build -m rtl8812AU_8821AU_linux -v 1.0
-# sudo dkms install -m rtl8812AU_8821AU_linux -v 1.0
+sudo cp -R . /usr/src/rtl8812AU_8821AU_linux-1.0
+sudo dkms add -m rtl8812AU_8821AU_linux -v 1.0
+sudo dkms build -m rtl8812AU_8821AU_linux -v 1.0
+sudo dkms install -m rtl8812AU_8821AU_linux -v 1.0
 ```
 
-### Compiling for Raspberry Pi
+## Compiling for Raspberry Pi
 
 Install kernel headers and other dependencies.
 
 ```sh
-# sudo apt-get install linux-image-rpi-rpfv linux-headers-rpi-rpfv dkms build-essential bc
+sudo apt-get install linux-image-rpi-rpfv linux-headers-rpi-rpfv dkms build-essential bc
 ```
 
 Append following at the end of your ``/boot/config.txt``, reboot your Pi
@@ -46,11 +46,11 @@ CONFIG_PLATFORM_ARM_RPI = y
 ```
 
 ```sh
-# cd /usr/src/rtl8812AU_8821AU_linux
-# sudo make clean
-# sudo make
-# sudo make install
-# sudo modprobe -a 8812au
+cd /usr/src/rtl8812AU_8821AU_linux
+sudo make clean
+sudo make
+sudo make install
+sudo modprobe -a 8812au
 ```
 
 ## Contributors
